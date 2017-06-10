@@ -18,4 +18,7 @@ export class AppComponent {
   constructor() {
     this.parties = Parties.find({}).zone();
   }
+  removeParty(party: Party): void {
+    Parties.remove(party._id);
+  }
 }
